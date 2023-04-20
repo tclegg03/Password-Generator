@@ -47,16 +47,15 @@ function generatePassword() {
   ){
   confirm("Must choose at least one option to generate a password.");
   generatePassword();
-  
-  var pwd=""
-  for ( let i = 0; i < elemnts.length; i++){
-    let mke = [Math.floor(math.random() * PasswordOptions.length)];
-    pwd= pwd + PasswordOptions[mke];
-    
+  // display new password
   }
-  return pwd;
+  
+  for( let i = 0; i < elemnts; i++){
+    var mke = [Math.floor(Math.random() * PasswordOptions.length)]
+   
   }
  
+return mke
 
 };
 function createPassword(){
@@ -65,11 +64,9 @@ function createPassword(){
   passwordText.value= password;
 };
 
-generateBtn.addEventListener("click", createPassword);
-// function createPassword(){
-//   let newPassword = generatePassword();
-//   let passwordText = document.querySelector("#password");
-// }
-  
-// Add event listener to generate button
+generateBtn.addEventListener("click", createPassword());
 
+
+// to gen a character look at 03 java inst 11 on arrays. 
+// save character like in the "if" statements. (dont leave out line 9)
+// return what was saved.  do not return "mke" create new var. 
