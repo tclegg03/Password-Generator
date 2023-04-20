@@ -34,10 +34,10 @@ function generatePassword() {
     PasswordOptions = PasswordOptions.concat(lettersLower);
   };
   if (numerals) {
-    PasswordOptions =PasswordOptions.concat(numbers);
+    PasswordOptions = PasswordOptions.concat(numbers);
   };
   if (special) {
-    PasswordOptions =PasswordOptions.concat(characters);
+    PasswordOptions = PasswordOptions.concat(characters);
   };
   if(
     uppercase=== false &&
@@ -51,13 +51,14 @@ function generatePassword() {
   }
   
   for( let i = 0; i < elemnts; i++){
-    var mke = [Math.floor(Math.random() * PasswordOptions.length)]
+    var mke = [Math.floor(Math.random() + PasswordOptions.length)]
    
+    var newPassword = mke += elemnts;
   }
- 
-return mke
+return(newPassword);
 
 };
+
 function createPassword(){
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
