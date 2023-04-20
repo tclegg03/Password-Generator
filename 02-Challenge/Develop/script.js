@@ -7,6 +7,7 @@ function generatePassword() {
   var lettersLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var characters = ["!", "@", "#", "$", "%", "&", "*"];
   var PasswordOptions = [];
+  var newPassword = [];
 
   let tostart = confirm("Select OK to Generate A Password")
 
@@ -49,13 +50,17 @@ function generatePassword() {
   generatePassword();
   // display new password
   }
-  
+  console.log(PasswordOptions)
+
   for( let i = 0; i < elemnts; i++){
-    var mke = [Math.floor(Math.random() + PasswordOptions.length)]
+    var mke = PasswordOptions[Math.floor(Math.random() * PasswordOptions.length)]
    
-    var newPassword = mke += elemnts;
+    newPassword =  newPassword.concat(mke);
+    console.log(mke);
   }
-return(newPassword);
+var finalPassword = newPassword.join("")
+
+return(finalPassword);
 
 };
 
